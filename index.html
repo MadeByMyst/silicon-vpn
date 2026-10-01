@@ -3,1864 +3,385 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SiliconVPN | Secure. Fast. Private.</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>SiliconVPN | Access the world. Your way.</title>
+    <meta
+      name="description"
+      content="SiliconVPN keeps what you do online private, on café Wi-Fi, in hotels or at home. A concept landing page by MadeByMyst."
+    />
+    <meta name="theme-color" content="#160a2b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SiliconVPN | Access the world. Your way." />
+    <meta
+      property="og:description"
+      content="A concept VPN landing page by MadeByMyst, built in plain HTML, CSS and JavaScript."
+    />
+    <meta
+      property="og:image"
+      content="https://madebymyst.github.io/silicon-vpn/assets/social-card.jpg"
+    />
+
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..600&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <!--NAVBAR-->
-    <header class="navbar" id="navbar">
-      <div class="navbar-inner">
-        <a href="#" class="navbar-logo" aria-label="SiliconVPN home">
-          <img src="assets/logo.png" alt="SiliconVPN logo" />
-          <span class="logo-text">SiliconVPN</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- HEADER (sits over the photo, turns white once you scroll) -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="SiliconVPN, back to top">
+          <img src="assets/logo.webp" alt="" width="30" height="30" />
+          <span>SiliconVPN</span>
         </a>
-        <nav class="navbar-links" aria-label="Main navigation">
-          <a href="#benefits">Benefits</a>
-          <a href="#how-it-works">How It Works</a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="visually-hidden">Menu</span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <a href="#why">Why a VPN</a>
+          <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a class="btn btn-primary btn-small" href="#pricing">Try it free</a>
         </nav>
-        <div class="navbar-cta">
-          <a href="#pricing" class="btn btn-primary">Get VPN</a>
-        </div>
-        <button
-          class="hamburger"
-          id="hamburger"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </header>
 
-    <div class="mobile-overlay" id="mobile-overlay"></div>
-    <aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-      <button class="mobile-close" id="mobile-close" aria-label="Close menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 -960 960 960"
-          width="24"
-          height="24"
-          fill="currentColor"
-        >
-          <path
-            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-          />
-        </svg>
-      </button>
-      <a href="#" class="mobile-logo">
-        <img src="assets/logo.png" alt="" /><span class="logo-text"
-          >SiliconVPN</span
-        >
-      </a>
-      <nav class="mobile-nav">
-        <a href="#benefits">Benefits</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="#pricing" class="btn btn-primary mobile-nav-cta">Get VPN</a>
-    </aside>
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="assets/earth-night.webp" alt="" width="2000" height="1331" fetchpriority="high" />
+        </div>
 
-    <!-- ═══════════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════════ -->
-    <section class="hero">
-      <div class="hero-bg">
-        <div class="hero-blob blob-1"></div>
-        <div class="hero-blob blob-2"></div>
-        <div class="hero-dots"></div>
-      </div>
-      <div class="hero-inner">
-        <div class="hero-text fade-in">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            <span>Military-grade encryption · No-log policy</span>
-          </div>
-          <h1>
-            Access <span class="text-gradient">The World.</span><br />Your Way.
+        <div class="container hero-content">
+          <h1 class="hero-title" id="hero-title">
+            <span class="line"><span>Access the world.</span></span>
+            <span class="line"><span>Your way.</span></span>
           </h1>
-          <p class="hero-sub">
-            SiliconVPN gives you private browsing, fast global routing, and
-            one-tap protection across all your devices. Stay encrypted. Stay
-            free.
+          <p class="lead hero-fade">
+            SiliconVPN keeps what you do online private, whether you're on café
+            Wi-Fi, in a hotel or at home. Fast servers in 90+ countries, and one
+            button to turn it on.
           </p>
-          <div class="hero-btns">
-            <a href="#pricing" class="btn btn-primary btn-lg"
-              >Get Started — It's Free</a
-            >
-            <a href="#benefits" class="btn btn-ghost btn-lg">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                width="16"
-                height="16"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 8v4m0 4h.01" />
-              </svg>
-              Learn More
+          <div class="actions hero-fade">
+            <a class="btn btn-primary" href="#pricing">Try it free</a>
+            <a class="btn-quiet" href="#why">
+              How it protects you
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat"><strong>98%</strong><span>Uptime</span></div>
-            <div class="stat-sep"></div>
-            <div class="hero-stat">
-              <strong>90+</strong><span>Countries</span>
+          <p class="hero-small hero-fade">Free plan, no card needed. Rated 4.8 out of 5 on the App Store.</p>
+        </div>
+
+        <p class="container concept-note">
+          SiliconVPN is a concept project made for a portfolio. Features, plans
+          and prices are demo content.
+        </p>
+      </section>
+
+      <!-- WHY A VPN -->
+      <section class="section" id="why" aria-labelledby="why-title">
+        <div class="container why-grid">
+          <figure class="why-photo reveal">
+            <img
+              src="assets/laptop-cafe.webp"
+              alt="Someone in a mustard jumper typing on a laptop at a wooden table"
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="why-text reveal">
+            <h2 id="why-title">Public Wi-Fi is more public than it looks</h2>
+            <p>
+              When you join a café or hotel network, whoever runs it can see
+              which sites you visit, and so can anyone on that network who knows
+              where to look. Your internet provider keeps a record too.
+            </p>
+
+            <div class="compare">
+              <div>
+                <h3>Without a VPN</h3>
+                <ul>
+                  <li>The Wi-Fi owner can see the sites you visit</li>
+                  <li>Your provider keeps a record of them</li>
+                  <li>Websites can tell roughly where you are</li>
+                </ul>
+              </div>
+              <div>
+                <h3>With SiliconVPN</h3>
+                <ul>
+                  <li>They only see a scrambled connection to us</li>
+                  <li>We don't keep a record either</li>
+                  <li>You choose which country you appear in</li>
+                </ul>
+              </div>
             </div>
-            <div class="stat-sep"></div>
-            <div class="hero-stat">
-              <strong>256-bit</strong><span>Encryption</span>
-            </div>
-            <div class="stat-sep"></div>
-            <div class="hero-stat"><strong>5★</strong><span>Rating</span></div>
           </div>
         </div>
-        <div class="hero-visual fade-in fade-delay">
-          <div class="hero-img-glow"></div>
-          <img
-            src="assets/image.png"
-            alt="SiliconVPN app preview"
-            class="hero-img"
-          />
-        </div>
-      </div>
-      <p class="disclaimer">
-        Disclaimer: SiliconVPN is a concept project for portfolio practice.
-        Features, plans, and pricing are demo content.
-      </p>
-      <div class="wave-divider">
-        <svg
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,40 C240,80 480,0 720,45 C960,90 1200,10 1440,45 L1440,80 L0,80 Z"
-            fill="var(--surface)"
-          />
-        </svg>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══════════════════════════════════════════════
-       BENEFITS
-  ═══════════════════════════════════════════════ -->
-    <section class="section benefits-section" id="benefits">
-      <div class="container">
-        <div class="section-head fade-up">
-          <span class="label-tag">Why SiliconVPN</span>
-          <h2>Built for everyday protection</h2>
-          <p>
-            Private browsing, speed-optimised routing, and simple onboarding —
-            protection that's easy to keep on, every day.
+      <!-- FEATURES -->
+      <section class="section features-section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <h2 class="section-title reveal" id="features-title">What you get</h2>
+
+          <dl class="features stagger">
+            <div>
+              <dt>Servers in 90+ countries</dt>
+              <dd>Pick a country, or let the app find the quickest server near you.</dd>
+            </div>
+            <div>
+              <dt>AES-256 encryption</dt>
+              <dd>The same standard banks use. It's on by default, with nothing to set up.</dd>
+            </div>
+            <div>
+              <dt>No logs</dt>
+              <dd>We don't record what you browse, when you connect or your IP address.</dd>
+            </div>
+            <div>
+              <dt>Kill switch</dt>
+              <dd>If the connection drops, your internet pauses until it's safe again.</dd>
+            </div>
+            <div>
+              <dt>Up to 10 devices</dt>
+              <dd>Phone, laptop, tablet, even your router. One account covers them all.</dd>
+            </div>
+            <div>
+              <dt>Apps for everything</dt>
+              <dd>Windows, macOS, iOS, Android and Linux.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section" id="how-it-works" aria-labelledby="how-title">
+        <div class="container how-grid">
+          <h2 class="reveal" id="how-title">Set up in about three minutes</h2>
+
+          <ol class="steps stagger">
+            <li>
+              <span class="step-num" aria-hidden="true">1</span>
+              <div>
+                <h3>Make an account</h3>
+                <p>Just an email address. The free plan doesn't ask for a card.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num" aria-hidden="true">2</span>
+              <div>
+                <h3>Install the app</h3>
+                <p>On your phone, your laptop, or both.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num" aria-hidden="true">3</span>
+              <div>
+                <h3>Press connect</h3>
+                <p>That's it. Leave it on and get on with your day.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- A WORD FROM A CUSTOMER -->
+      <section class="section quote-section" aria-label="What a customer says">
+        <div class="container">
+          <figure class="quote reveal">
+            <blockquote>
+              <p>
+                “I work from cafés most days. I switch SiliconVPN on in the
+                morning and honestly forget it's there, which is exactly what I
+                wanted.”
+              </p>
+            </blockquote>
+            <figcaption><strong>Lina H.</strong><br />Freelance designer, works from cafés</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="container">
+          <div class="pricing-top reveal">
+            <h2 id="pricing-title">Pricing</h2>
+            <p>Start free. Upgrade if you need more. Cancel whenever you like.</p>
+          </div>
+
+          <div class="plans stagger">
+            <article class="plan">
+              <h3>Basic</h3>
+              <p class="price">Free</p>
+              <p class="plan-note">Free forever</p>
+              <ul>
+                <li>10+ server locations</li>
+                <li>Standard encryption</li>
+                <li>Help centre support</li>
+              </ul>
+              <button class="btn btn-outline js-demo" type="button">Download free</button>
+            </article>
+
+            <article class="plan plan-featured">
+              <p class="plan-tag">What most people choose</p>
+              <h3>Standard</h3>
+              <p class="price">$20<span>/month</span></p>
+              <p class="plan-note">or $12 a month, paid yearly</p>
+              <ul>
+                <li>50+ server locations</li>
+                <li>Advanced encryption</li>
+                <li>Unlimited bandwidth</li>
+                <li>Priority support</li>
+                <li>Multiple devices</li>
+              </ul>
+              <button class="btn btn-primary js-demo" type="button">Choose Standard</button>
+            </article>
+
+            <article class="plan">
+              <h3>Premium</h3>
+              <p class="price">$40<span>/month</span></p>
+              <p class="plan-note">or $24 a month, paid yearly</p>
+              <ul>
+                <li>All 90+ locations</li>
+                <li>Top-tier encryption</li>
+                <li>Unlimited bandwidth</li>
+                <li>24/7 live support</li>
+                <li>Up to 10 devices</li>
+                <li>Built-in password manager</li>
+              </ul>
+              <button class="btn btn-outline js-demo" type="button">Choose Premium</button>
+            </article>
+          </div>
+
+          <p class="pricing-note reveal">
+            Every paid plan comes with a 30-day money-back guarantee.
           </p>
         </div>
-        <div class="benefits-grid">
-          <article class="benefit-card fade-up" style="--d: 0s">
-            <div class="bcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3>Fast Connection</h3>
-            <p>
-              Optimized routing keeps latency low and page loads quick, even on
-              crowded public networks and long-distance connections.
-            </p>
-          </article>
-          <article class="benefit-card fade-up" style="--d: 0.1s">
-            <div class="bcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              >
-                <rect x="3" y="11" width="18" height="11" rx="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-            </div>
-            <h3>Secure Encryption</h3>
-            <p>
-              Modern encryption standards protect your traffic from snooping
-              while keeping performance reliable for daily browsing and work.
-            </p>
-          </article>
-          <article class="benefit-card fade-up" style="--d: 0.2s">
-            <div class="bcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path
-                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                />
-              </svg>
-            </div>
-            <h3>Global Servers</h3>
-            <p>
-              Connect through 90+ countries for better speed and access to
-              services with less regional friction wherever you are.
-            </p>
-          </article>
-          <article class="benefit-card fade-up" style="--d: 0.3s">
-            <div class="bcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-            </div>
-            <h3>Full Privacy</h3>
-            <p>
-              Privacy-first defaults minimize exposure by encrypting traffic and
-              limiting identifiable network activity across all your apps.
-            </p>
-          </article>
-          <article class="benefit-card fade-up" style="--d: 0.4s">
-            <div class="bcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 8v4l3 3" />
-              </svg>
-            </div>
-            <h3>24/7 Support</h3>
-            <p>
-              Support resources and guidance are available around the clock so
-              setup and troubleshooting stay simple whenever you need it.
-            </p>
-          </article>
-          <article class="benefit-card fade-up" style="--d: 0.5s">
-            <div class="bcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-                />
-              </svg>
-            </div>
-            <h3>Easy Setup</h3>
-            <p>
-              Install quickly, choose your location, and secure your connection
-              in seconds with a clean, straightforward setup flow.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══════════════════════════════════════════════
-       FEATURE SPLIT  #1  — Privacy on every network
-  ═══════════════════════════════════════════════ -->
-    <section class="feature-split section" id="feature-privacy">
-      <div class="container">
-        <div class="fsplit-inner fsplit-img-right fade-up">
-          <!-- Text side -->
-          <div class="fsplit-text">
-            <span class="label-tag">Always Protected</span>
-            <h2>Your privacy on every network, everywhere.</h2>
-            <p>
-              Whether you're catching up on work at a coffee shop, booking
-              flights at the airport, or streaming from a hotel room —
-              SiliconVPN encrypts every byte before it leaves your device.
-            </p>
-
-            <ul class="fsplit-points">
-              <li>
-                <div class="fsplit-point-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    width="18"
-                    height="18"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Automatic kill switch</strong>
-                  <span
-                    >Your connection goes dark the instant VPN drops — no leaks,
-                    ever.</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="fsplit-point-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    width="18"
-                    height="18"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path
-                      d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Zero DNS leaks</strong>
-                  <span
-                    >All queries route through our encrypted servers so your ISP
-                    sees nothing.</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="fsplit-point-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    width="18"
-                    height="18"
-                  >
-                    <rect x="3" y="11" width="18" height="11" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Military-grade AES-256</strong>
-                  <span
-                    >The gold standard used by banks, governments, and
-                    intelligence agencies.</span
-                  >
-                </div>
-              </li>
-            </ul>
-            <a
-              href="#pricing"
-              class="btn btn-primary btn-lg"
-              style="width: fit-content; margin-top: 8px"
-              >Get Protected Now</a
-            >
+      <!-- FAQ -->
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-grid">
+          <div class="faq-head reveal">
+            <h2 id="faq-title">Questions</h2>
+            <p>The short answers to what people ask most.</p>
           </div>
 
-          <!-- Visual side -->
-          <div class="fsplit-visual">
-            <div class="fsplit-card-scene">
-              <div class="fsplit-glow"></div>
-
-              <!-- Main mock UI card -->
-              <div class="fsplit-mockcard">
-                <div class="fmc-header">
-                  <div class="fmc-status">
-                    <span class="fmc-dot connected"></span>
-                    <span class="fmc-status-txt">Connected</span>
-                  </div>
-                  <span class="fmc-proto">WireGuard</span>
-                </div>
-                <div class="fmc-ip">
-                  <span class="fmc-ip-label">Your visible IP</span>
-                  <span class="fmc-ip-value"
-                    >185.220.<span class="fmc-redact">XXX.XXX</span></span
-                  >
-                </div>
-                <div class="fmc-loc-row">
-                  <div class="fmc-flag">🇳🇱</div>
-                  <div class="fmc-loc-info">
-                    <strong>Amsterdam</strong>
-                    <span>Netherlands · 12 ms</span>
-                  </div>
-                  <div class="fmc-signal">
-                    <span></span><span></span><span></span><span></span>
-                  </div>
-                </div>
-                <div class="fmc-enc">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    width="14"
-                    height="14"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  </svg>
-                  AES-256-GCM Encrypted
-                </div>
+          <div class="faq-list reveal">
+            <details class="faq-item">
+              <summary>Is SiliconVPN a real service?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>No. SiliconVPN is a concept project made to show landing page design. There's no app to download and no real VPN behind it.</p>
               </div>
-
-              <!-- Floating badges -->
-              <div class="fsplit-badge fsplit-badge-1">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                No Logs
+            </details>
+            <details class="faq-item">
+              <summary>Is there a free plan?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>Yes. Basic is free forever and doesn't need a credit card. Upgrade whenever you want more locations or devices.</p>
               </div>
-              <div class="fsplit-badge fsplit-badge-2">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                10 Gbps Servers
+            </details>
+            <details class="faq-item">
+              <summary>Does SiliconVPN keep logs?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>No. Your browsing, connection times and IP address are never recorded or shared.</p>
               </div>
-            </div>
+            </details>
+            <details class="faq-item">
+              <summary>Which devices does it work on?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>Windows, macOS, iOS, Android and Linux, plus routers. Premium covers up to 10 devices at the same time.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Will it slow down my internet?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>Barely. SiliconVPN uses the WireGuard protocol and fast servers, so on a good connection most people won't notice a difference.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What happens if the VPN disconnects?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>The kill switch pauses your internet until the VPN is back, so nothing is ever sent unprotected.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Can I cancel anytime?<span class="faq-icon" aria-hidden="true"></span></summary>
+              <div class="faq-answer">
+                <p>Yes. There's no contract, and every paid plan has a 30-day money-back guarantee.</p>
+              </div>
+            </details>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══════════════════════════════════════════════
-       HOW IT WORKS
-  ═══════════════════════════════════════════════ -->
-    <section class="section how-section" id="how-it-works">
-      <div class="container">
-        <div class="section-head fade-up">
-          <span class="label-tag">Simple Process</span>
-          <h2>Up and running in 3 minutes</h2>
-          <p>
-            No technical knowledge required. Three steps and you're protected.
-          </p>
+      <!-- CLOSING -->
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="container closing-inner reveal">
+          <h2 id="closing-title">Try SiliconVPN free</h2>
+          <p>The free plan never runs out, and you won't need a card to start.</p>
+          <a class="btn btn-primary" href="#pricing">See the plans</a>
         </div>
-        <div class="steps-row">
-          <div class="step fade-up" style="--d: 0s">
-            <div class="step-num">01</div>
-            <h3>Create Your Account</h3>
-            <p>
-              Sign up in under a minute. No credit card required for the free
-              plan — just an email and you're in.
-            </p>
-          </div>
-          <div class="step-arrow fade-up" style="--d: 0.1s">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="step fade-up" style="--d: 0.15s">
-            <div class="step-num">02</div>
-            <h3>Pick a Server</h3>
-            <p>
-              Choose from 90+ global locations. Our smart routing picks the
-              fastest one for you automatically.
-            </p>
-          </div>
-          <div class="step-arrow fade-up" style="--d: 0.25s">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="step fade-up" style="--d: 0.3s">
-            <div class="step-num">03</div>
-            <h3>Connect &amp; Browse</h3>
-            <p>
-              One tap and you're protected. Your IP is masked, traffic is
-              encrypted, and you're free to browse anything.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ═══════════════════════════════════════════════
-       PRICING
-  ═══════════════════════════════════════════════ -->
-    <section class="section pricing-section" id="pricing">
-      <div class="container">
-        <div class="section-head fade-up">
-          <span class="label-tag">Plans</span>
-          <h2>Simple, transparent pricing</h2>
-          <p>
-            From occasional browsing to always-on coverage for all your devices
-            — choose what fits.
-          </p>
-        </div>
-        <div class="pricing-grid">
-          <div class="pcard fade-up" style="--d: 0s">
-            <span class="pcard-badge">Starter</span>
-            <h3 class="pcard-name">Basic</h3>
-            <div class="pcard-price"><span class="price-num">Free</span></div>
-            <p class="pcard-desc">
-              Perfect for occasional use and getting a feel for SiliconVPN.
-            </p>
-            <ul class="pcard-features">
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Access to 10+ servers
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Standard encryption
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Basic support
-              </li>
-              <li class="feat-off">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" /></svg
-                >Unlimited bandwidth
-              </li>
-              <li class="feat-off">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" /></svg
-                >Multi-device
-              </li>
-            </ul>
-            <a href="#" class="btn btn-outline pcard-cta">Download Free</a>
-          </div>
-
-          <div class="pcard fade-up" style="--d: 0.12s">
-            <span class="pcard-badge pcard-badge-pop">Popular</span>
-            <h3 class="pcard-name">Standard</h3>
-            <div class="pcard-price">
-              <span class="price-num">$20</span
-              ><span class="price-per">/mo</span>
-            </div>
-            <p class="pcard-desc">
-              Great for remote workers and frequent travellers needing reliable
-              coverage.
-            </p>
-            <ul class="pcard-features">
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Access to 50+ servers
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Advanced encryption
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Priority support
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Unlimited bandwidth
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >No cooldown
-              </li>
-              <li class="feat-off">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" /></svg
-                >Multi-device
-              </li>
-            </ul>
-            <a href="#" class="btn btn-primary pcard-cta">Choose Plan</a>
-          </div>
-
-          <div class="pcard pcard-featured fade-up" style="--d: 0.24s">
-            <span class="pcard-badge pcard-badge-gold">Best Value</span>
-            <h3 class="pcard-name">Premium</h3>
-            <div class="pcard-price">
-              <span class="price-num">$40</span
-              ><span class="price-per">/mo</span>
-            </div>
-            <p class="pcard-desc">
-              Everything you need for total digital freedom across all your
-              devices, always.
-            </p>
-            <ul class="pcard-features">
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >All 90+ servers worldwide
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Top-tier encryption
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >24/7 dedicated support
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Unlimited bandwidth
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >No cooldown
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Multi-device support
-              </li>
-              <li class="feat-on">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                  width="14"
-                  height="14"
-                >
-                  <polyline points="20 6 9 17 4 12" /></svg
-                >Password Manager
-              </li>
-            </ul>
-            <a href="#" class="btn btn-gold pcard-cta">Choose Plan</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════
-       FEATURE SPLIT  #2  — One account, every device
-  ═══════════════════════════════════════════════ -->
-    <section
-      class="feature-split feature-split-dark section"
-      id="feature-devices"
-    >
-      <div class="container">
-        <div class="fsplit-inner fsplit-img-left fade-up">
-          <!-- Visual side -->
-          <div class="fsplit-visual">
-            <div class="fsplit-card-scene fsplit-scene-devices">
-              <div class="fsplit-glow fsplit-glow-gold"></div>
-
-              <!-- Device stack mock -->
-              <div class="fdev-stack">
-                <div class="fdev-card fdev-laptop">
-                  <div class="fdev-bar">
-                    <div class="fdev-dots">
-                      <span></span><span></span><span></span>
-                    </div>
-                    <div class="fdev-addr">siliconvpn.io</div>
-                    <div class="fdev-lock">🔒</div>
-                  </div>
-                  <div class="fdev-body">
-                    <div class="fdev-line fw"></div>
-                    <div class="fdev-line fm"></div>
-                    <div class="fdev-line fs"></div>
-                  </div>
-                </div>
-                <div class="fdev-card fdev-phone">
-                  <div class="fdev-phone-bar">
-                    <span class="fdev-phone-dot"></span>
-                  </div>
-                  <div class="fdev-phone-body">
-                    <div class="fdev-shield-icon">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        width="28"
-                        height="28"
-                      >
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                      </svg>
-                    </div>
-                    <span class="fdev-phone-connected">Connected</span>
-                  </div>
-                </div>
-                <div class="fdev-count-badge">
-                  <strong>10</strong>
-                  <span>devices</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Text side -->
-          <div class="fsplit-text">
-            <span class="label-tag label-tag-light">Multi-Device</span>
-            <h2>One account.<br />Protect up to ten devices.</h2>
-            <p>
-              From your laptop and phone to your tablet and router — a single
-              Premium plan covers your entire digital life. Every device
-              encrypted, all at once.
-            </p>
-
-            <ul class="fsplit-points fsplit-points-light">
-              <li>
-                <div class="fsplit-point-icon fsplit-point-icon-light">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    width="18"
-                    height="18"
-                  >
-                    <rect x="2" y="3" width="20" height="14" rx="2" />
-                    <path d="M8 21h8M12 17v4" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>All platforms covered</strong>
-                  <span
-                    >Windows, macOS, iOS, Android, Linux, and router support
-                    built-in.</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="fsplit-point-icon fsplit-point-icon-light">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    width="18"
-                    height="18"
-                  >
-                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Simultaneous connections</strong>
-                  <span
-                    >All 10 devices connect at the same time — no queuing, no
-                    compromise.</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="fsplit-point-icon fsplit-point-icon-light">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    width="18"
-                    height="18"
-                  >
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21-4.35-4.35" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Smart server matching</strong>
-                  <span
-                    >Each device auto-picks the nearest, fastest server for
-                    optimal speed.</span
-                  >
-                </div>
-              </li>
-            </ul>
-            <a
-              href="#pricing"
-              class="btn btn-gold btn-lg"
-              style="width: fit-content; margin-top: 8px"
-              >Unlock Premium</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════
-       FAQ  (tabbed two-column redesign)
-  ═══════════════════════════════════════════════ -->
-    <section class="section faq-section" id="faq">
-      <div class="container">
-        <div class="section-head fade-up">
-          <span class="label-tag">FAQ</span>
-          <h2>Everything you need to know</h2>
-          <p>Browse by topic or search any question. We've covered it all.</p>
-        </div>
-
-        <!-- Category tabs -->
-        <div
-          class="faq-tabs fade-up"
-          role="tablist"
-          aria-label="FAQ categories"
-        >
-          <button
-            class="faq-tab active"
-            role="tab"
-            aria-selected="true"
-            data-tab="general"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              width="16"
-              height="16"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 8v4m0 4h.01" />
-            </svg>
-            General
-          </button>
-          <button
-            class="faq-tab"
-            role="tab"
-            aria-selected="false"
-            data-tab="privacy"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              width="16"
-              height="16"
-            >
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            Privacy &amp; Security
-          </button>
-          <button
-            class="faq-tab"
-            role="tab"
-            aria-selected="false"
-            data-tab="plans"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              width="16"
-              height="16"
-            >
-              <rect x="2" y="5" width="20" height="14" rx="2" />
-              <path d="M2 10h20" />
-            </svg>
-            Plans &amp; Billing
-          </button>
-          <button
-            class="faq-tab"
-            role="tab"
-            aria-selected="false"
-            data-tab="technical"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-              />
-            </svg>
-            Technical
-          </button>
-        </div>
-
-        <!-- Panels -->
-        <div class="faq-panels">
-          <!-- General -->
-          <div class="faq-panel active" data-panel="general">
-            <div class="faq-two-col">
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is SiliconVPN a real service?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      SiliconVPN is a portfolio concept created to demonstrate
-                      UI design and frontend skills. It is not a live VPN
-                      service — no real connections are made.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>What devices can I use it on?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      The concept covers Windows, macOS, iOS, and Android
-                      workflows. Premium plan members get simultaneous support
-                      across up to 10 devices with one account.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>How many server locations are there?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      SiliconVPN features 90+ server locations across the globe.
-                      Free plan users access 10+ servers; Standard unlocks 50+;
-                      Premium unlocks all regions with the lowest latency
-                      guarantee.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is SiliconVPN open source?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Not currently. A public repository may be shared in a
-                      future release of this project. Follow the developer's
-                      GitHub profile for updates.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>How fast is the setup?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Setup takes under 3 minutes. Create an account, pick a
-                      server location, and tap connect. No technical knowledge
-                      required — it works right out of the box.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Can I use SiliconVPN on public Wi-Fi?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Absolutely — that's the primary use case. SiliconVPN
-                      encrypts all traffic on open or shared networks like
-                      coffee shops, airports, and hotels so eavesdroppers see
-                      nothing.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Does it work for streaming?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Yes. SiliconVPN's optimized servers support HD and 4K
-                      streaming with minimal buffering. Switch to a server in
-                      your target region to access geo-restricted content
-                      effortlessly.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is there 24/7 customer support?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Premium plan members receive 24/7 dedicated live support.
-                      All other plans include access to our help centre, setup
-                      guides, and community forum around the clock.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Privacy & Security -->
-          <div class="faq-panel" data-panel="privacy">
-            <div class="faq-two-col">
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Does SiliconVPN keep logs?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Strictly no-logs. SiliconVPN does not monitor, record, or
-                      share your browsing activity, connection timestamps, IP
-                      addresses, or bandwidth usage. What you do is your
-                      business.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>What encryption standard is used?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      AES-256-GCM encryption — the same standard used by
-                      military and financial institutions. Premium adds ChaCha20
-                      for mobile connections where battery efficiency also
-                      matters.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>What VPN protocol does it use?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      WireGuard by default — the fastest and most modern VPN
-                      protocol available. OpenVPN and IKEv2 are also supported
-                      for compatibility with older systems and corporate
-                      firewalls.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is there a kill switch?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Yes. The automatic kill switch cuts your internet
-                      connection the moment VPN drops, preventing any
-                      unencrypted data from leaking. It re-connects
-                      automatically once the VPN is restored.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Does it protect against DNS leaks?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      All DNS queries are routed exclusively through
-                      SiliconVPN's encrypted servers. Built-in DNS leak
-                      prevention ensures your ISP can never see which domains
-                      you are accessing.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Can SiliconVPN be detected?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Obfuscation mode disguises VPN traffic as regular HTTPS
-                      traffic, making it extremely difficult to detect or block
-                      — useful in restrictive network environments.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Plans & Billing -->
-          <div class="faq-panel" data-panel="plans">
-            <div class="faq-two-col">
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is there a free plan?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Yes. The Basic plan is completely free — no credit card
-                      required. It includes access to 10+ servers and standard
-                      encryption, forever. Upgrade anytime when you need more.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Can I cancel my subscription anytime?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Absolutely. No lock-in contracts. Cancel or downgrade at
-                      any time from your account settings — you'll keep access
-                      until the end of the current billing cycle.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is there a refund policy?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Yes — a 30-day money-back guarantee on all paid plans. If
-                      you're not satisfied for any reason, request a full refund
-                      within 30 days with no questions asked.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>What payment methods are accepted?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Credit and debit cards, PayPal, Apple Pay, Google Pay, and
-                      cryptocurrency are all accepted. Paying with crypto adds
-                      an extra layer of payment privacy.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Can I share my plan with family?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      The Premium plan supports up to 10 simultaneous devices on
-                      a single account, making it ideal for families or
-                      households. Each device connects independently with full
-                      performance.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Are there annual plan discounts?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Choosing an annual plan saves up to 40% compared to the
-                      monthly rate. Two-year plans offer the deepest discount.
-                      All plans include the same 30-day money-back guarantee.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Technical -->
-          <div class="faq-panel" data-panel="technical">
-            <div class="faq-two-col">
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Will a VPN slow down my internet?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Minimal impact. On fast connections (100 Mbps+), you'll
-                      typically see less than a 5% speed reduction. Our
-                      WireGuard protocol and 10 Gbps servers are specifically
-                      optimised to keep speeds near-native.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Does it work on routers?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Yes. SiliconVPN supports router-level installation via
-                      OpenVPN and WireGuard configs. Once installed, every
-                      device on your home network is automatically protected —
-                      including smart TVs and consoles.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>What is split tunnelling?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Split tunnelling lets you choose which apps route through
-                      the VPN and which use your regular connection. Great for
-                      online banking apps that block VPN IPs while you browse
-                      privately elsewhere.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq-col">
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Can I use it for torrenting?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      P2P traffic is supported on dedicated torrent-optimised
-                      servers. Your IP is fully masked throughout, and the kill
-                      switch ensures nothing leaks if the connection ever drops
-                      mid-download.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Is there a browser extension?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Chrome and Firefox extensions are available for
-                      browser-only protection. For full system coverage, use the
-                      desktop or mobile app which encrypts all traffic — not
-                      just the browser.
-                    </p>
-                  </div>
-                </div>
-                <div class="faq-item">
-                  <button class="faq-q" type="button" aria-expanded="false">
-                    <span>Does it work in restrictive countries?</span>
-                    <svg
-                      class="faq-chevron"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                      width="18"
-                      height="18"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
-                  <div class="faq-a">
-                    <p>
-                      Obfuscation mode disguises VPN traffic as regular web
-                      traffic, allowing it to work reliably in regions where
-                      standard VPN protocols are blocked or restricted.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /faq-panels -->
-
-        <!-- Bottom CTA strip -->
-        <div class="faq-cta-strip fade-up">
-          <div class="faq-cta-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              width="28"
-              height="28"
-            >
-              <path
-                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-              />
-            </svg>
-          </div>
-          <div class="faq-cta-text">
-            <strong>Still have questions?</strong>
-            <span>Our support team replies in under 5 minutes.</span>
-          </div>
-          <a href="#contact" class="btn btn-primary">Contact Support</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════
-       CTA BANNER
-  ═══════════════════════════════════════════════ -->
-    <section class="cta-banner fade-up">
-      <div class="cta-banner-inner">
-        <div class="cta-blob"></div>
-        <h2>Start browsing privately — for free.</h2>
-        <p>No credit card. No commitment. Just one tap to privacy.</p>
-        <div class="cta-btns">
-          <a href="#pricing" class="btn btn-white btn-lg">Get Started Free</a>
-          <a href="#faq" class="btn btn-ghost-light btn-lg">Read the FAQ</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════════ -->
-    <footer class="footer" id="contact">
-      <div class="footer-top">
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-top">
         <div class="footer-brand">
-          <a href="#" class="footer-logo-link">
-            <img src="assets/logo.png" alt="SiliconVPN" />
-            <span class="logo-text">SiliconVPN</span>
+          <a class="brand" href="#top" aria-label="SiliconVPN, back to top">
+            <img src="assets/logo.webp" alt="" width="30" height="30" />
+            <span>SiliconVPN</span>
           </a>
-          <p class="footer-tagline">Access the world. Your way.</p>
-          <a
-            href="https://madebymyst.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer-portfolio-link"
-            >View MadeByMyst Portfolio</a
-          >
-          <div class="footer-socials">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              class="soc-btn"
-            >
-              <img class="soc-def" src="assets/twitter.png" alt="" /><img
-                class="soc-hov"
-                src="assets/twitter-hover.png"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              class="soc-btn"
-            >
-              <img class="soc-def" src="assets/linkedin.png" alt="" /><img
-                class="soc-hov"
-                src="assets/linkedin-hover.png"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              class="soc-btn"
-            >
-              <img class="soc-def" src="assets/instagram.png" alt="" /><img
-                class="soc-hov"
-                src="assets/instagram-hover.png"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              class="soc-btn"
-            >
-              <img class="soc-def" src="assets/github.png" alt="" /><img
-                class="soc-hov"
-                src="assets/github-hover.png"
-                alt=""
-              />
-            </a>
-          </div>
+          <p>Access the world. Your way.</p>
         </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Navigate</span>
-          <a href="#benefits">Benefits</a>
-          <a href="#how-it-works">How It Works</a>
+
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#why">Why a VPN</a>
+          <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Credits</span>
-          <a
-            href="https://unsplash.com/photos/a-blurry-image-of-a-blue-and-pink-background-VXXvmc7wQjY"
-            target="_blank"
-            rel="noopener"
-            >Background — Unsplash</a
-          >
-          <a
-            href="https://din-studio.com/flat-design-style-and-its-characters/"
-            target="_blank"
-            rel="noopener"
-            >Vector art — DinStudio</a
-          >
-          <a href="https://www.svgrepo.com/" target="_blank" rel="noopener"
-            >Icons — SVG Repo</a
-          >
-        </div>
+        </nav>
+
+        <ul class="footer-credits">
+          <li>Earth photo by <a href="https://unsplash.com/@nasa" target="_blank" rel="noopener">NASA</a> on <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a></li>
+          <li>Laptop photo from <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a></li>
+          <li>Font from <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 MadeByMyst (Shahab MD). All rights reserved.</p>
-        <p class="footer-note">Built with HTML, CSS &amp; Vanilla JS</p>
+
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year>2026</span> SiliconVPN. A concept project by
+          <a href="https://madebymyst.github.io/">MadeByMyst (Shahab MD)</a>.
+        </p>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
 
-    <!-- Back to top -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        width="20"
-        height="20"
-      >
-        <polyline points="18 15 12 9 6 15" />
-      </svg>
-    </button>
-
-    <script src="script.js"></script>
+    <!-- Small message for the plan buttons -->
+    <p class="toast" role="status" aria-live="polite"></p>
   </body>
 </html>
