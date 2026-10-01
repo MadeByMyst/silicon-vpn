@@ -4,8 +4,8 @@
 
 ### *Secure. Fast. Private.*
 
-[![Live Site](https://img.shields.io/badge/Live_Site-Visit-4f46e5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mystiqdev.github.io/silicon-vpn-fictinonal)
-[![GitHub](https://img.shields.io/badge/GitHub-MystiqDev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MystiqDev)
+[![Live Site](https://img.shields.io/badge/Live_Site-Visit-4f46e5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://madebymyst.github.io/silicon-vpn)
+[![GitHub](https://img.shields.io/badge/GitHub-MadeByMyst-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MadeByMyst)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -24,7 +24,7 @@
 
 ## 🎯 Purpose
 
-This project was built as a **front-end practice exercise** by [MystiqDev](https://github.com/MystiqDev) — a front-end developer focused on clean, responsive design with pure HTML, CSS, and Vanilla JavaScript.
+This project was built as a **front-end practice exercise** by [MadeByMyst](https://github.com/MadeByMyst) — a front-end developer focused on clean, responsive design with pure HTML, CSS, and Vanilla JavaScript.
 
 **Goals of this project:**
 - Practice designing and building a full SaaS/product landing page from scratch
@@ -66,7 +66,7 @@ Zero npm. Zero build tools. Zero libraries. Pure hand-written code.
 ## 📁 Project Structure
 
 ```
-silicon-vpn-fictinonal/
+silicon-vpn/
 ├── index.html       # Full page markup
 ├── styles.css       # All styling, custom properties, animations, responsive rules
 ├── script.js        # Navbar, mobile menu, fade-ups, FAQ tabs & accordion, back-to-top
@@ -89,13 +89,13 @@ No build step needed — just open it in a browser.
 
 ```bash
 # Clone the repo
-git clone https://github.com/MystiqDev/silicon-vpn-fictinonal.git
+git clone https://github.com/MadeByMyst/silicon-vpn.git
 
 # Open in browser
 open index.html
 ```
 
-Or view it live: **[mystiqdev.github.io/silicon-vpn-fictinonal](https://mystiqdev.github.io/silicon-vpn-fictinonal)**
+Or view it live: **[madebymyst.github.io/silicon-vpn](https://madebymyst.github.io/silicon-vpn)**
 
 ---
 
@@ -134,9 +134,9 @@ Or view it live: **[mystiqdev.github.io/silicon-vpn-fictinonal](https://mystiqde
 
 ## 👤 Author
 
-**MystiqDev** — Front-end developer from Oman
+**MadeByMyst** — Front-end developer from Oman
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-6c63ff?style=flat-square&logo=googlechrome&logoColor=white)](https://mystiqdev.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-6c63ff?style=flat-square&logo=googlechrome&logoColor=white)](https://madebymyst.github.io)
 [![Twitter](https://img.shields.io/badge/Twitter-@my__st45-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://x.com/my_st45)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mystique--X-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mystique-x-9572b93a7/)
 [![Instagram](https://img.shields.io/badge/Instagram-mysti__qdev-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/mysti_qdev/)
@@ -145,6 +145,6 @@ Or view it live: **[mystiqdev.github.io/silicon-vpn-fictinonal](https://mystiqde
 
 <div align="center">
 
-*© 2026 MystiqDev — A fictional concept project. Built with HTML, CSS & Vanilla JS.*
+*© 2026 MadeByMyst — A fictional concept project. Built with HTML, CSS & Vanilla JS.*
 
 </div>

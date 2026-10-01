@@ -507,7 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "  \u2022 Up to 2 GB / day bandwidth\n\n" +
         "NOTE: This is a demo installer file for portfolio purposes.\n" +
         "SiliconVPN is a concept project \u2014 no real VPN connection is established.\n\n" +
-        "\u00a9 2026 MystiqDev \u00b7 SiliconVPN";
+        "\u00a9 2026 MadeByMyst \u00b7 SiliconVPN";
       const blob = new Blob([content], { type: "text/plain" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
